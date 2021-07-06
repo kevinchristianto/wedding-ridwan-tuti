@@ -1792,4 +1792,11 @@ html, body {
 	min-height: 100vh;
 }
 
+.parallax-background {
+	background-position-x: 50% !important;
+	background-size: cover;
+	position: relative;
+	background-repeat: no-repeat;
+}
+
 /*# sourceMappingURL=style.css.map */

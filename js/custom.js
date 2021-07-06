@@ -51,7 +51,7 @@ $(function() {
 
 	var parallax = function() {
 		if ( !isiPad() || !isiPhone() ) {
-			$.stellar({
+			$(window).stellar({
 				horizontalScrolling: false,
 			});
 		}

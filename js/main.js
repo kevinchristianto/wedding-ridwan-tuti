@@ -94,9 +94,8 @@
 	// Parallax
 	var parallax = function() {
 		if ( !isiPad() || !isiPhone() ) {
-			$.stellar({
+			$(window).stellar({
 				horizontalScrolling: false,
-				responsive: true
 			});
 		}
 	};
@@ -302,7 +301,7 @@
 		testimonialCarousel();
 		sliderMain();
 		clickMenu();
-		// parallax();
+		parallax();
 		// windowScroll();
 		navigationSection();
 		contentWayPoint();
