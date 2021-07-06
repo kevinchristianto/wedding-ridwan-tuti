@@ -1,6 +1,6 @@
 $(function() {
 
-    // This function are copied from main.js
+    // These 2 functions are copied from main.js
     // I copied it here just to simplify and make it easier to call, but it's not practical
     var contentWayPoint = () => {
 		var i = 0;
@@ -38,10 +38,30 @@ $(function() {
 		} , { offset: '85%' } );
     }
 
+	var isiPad = function(){
+		return (navigator.platform.indexOf("iPad") != -1);
+	};
+
+	var isiPhone = function(){
+	    return (
+			(navigator.platform.indexOf("iPhone") != -1) || 
+			(navigator.platform.indexOf("iPod") != -1)
+	    );
+	};
+
+	var parallax = function() {
+		if ( !isiPad() || !isiPhone() ) {
+			$.stellar({
+				horizontalScrolling: false,
+			});
+		}
+	};
+
     $("#open-invitation").click(() => {
         $("#invitation-content").removeClass("hidden")
         $(".animate-box-hidden").addClass("animate-box")
         contentWayPoint()
+		parallax()
 		$(window).scrollTo($("#invitation-content"), 2000, {easing: 'easeInOutQuint'})
     })
 
