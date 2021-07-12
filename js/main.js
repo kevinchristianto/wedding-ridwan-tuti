@@ -96,6 +96,9 @@
 		if ( !isiPad() || !isiPhone() ) {
 			$(window).stellar({
 				horizontalScrolling: false,
+				responsive: true,
+				parallaxElements: false,
+				hideDistantElement: true
 			});
 		}
 	};
@@ -301,7 +304,7 @@
 		testimonialCarousel();
 		sliderMain();
 		clickMenu();
-		parallax();
+		// parallax();
 		// windowScroll();
 		navigationSection();
 		contentWayPoint();

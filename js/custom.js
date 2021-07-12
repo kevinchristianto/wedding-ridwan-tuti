@@ -53,15 +53,18 @@ $(function() {
 		if ( !isiPad() || !isiPhone() ) {
 			$(window).stellar({
 				horizontalScrolling: false,
+				responsive: true,
+				parallaxElements: false,
+				hideDistantElement: true
 			});
 		}
 	};
 
     $("#open-invitation").click(() => {
-        $("#invitation-content").removeClass("hidden")
+		$("#invitation-content").removeClass("hidden")
         $(".animate-box-hidden").addClass("animate-box")
-        contentWayPoint()
 		parallax()
+        contentWayPoint()
 		$(window).scrollTo($("#invitation-content"), 2000, {easing: 'easeInOutQuint'})
     })
 
