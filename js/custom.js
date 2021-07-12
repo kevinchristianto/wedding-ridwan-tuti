@@ -1,5 +1,15 @@
 $(function() {
 
+	const urlParams = new URLSearchParams(window.location.search)
+	let name = urlParams.get('recipient')
+	let arr = name.split("_")
+	arr.forEach((val, i) => {
+		arr[i] = arr[i][0].toUpperCase() + arr[i].substr(1)
+		console.log(arr[i])
+	})
+	name = arr.join(" ")
+	$('#recipient').html(name)
+
     // These 2 functions are copied from main.js
     // I copied it here just to simplify and make it easier to call, but it's not practical
     var contentWayPoint = () => {
