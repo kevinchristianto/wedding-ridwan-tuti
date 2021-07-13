@@ -42,7 +42,7 @@ a:focus {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
 
 h1,
@@ -277,6 +277,10 @@ h6 {
 	line-height: 1.5;
 	color: #929292;
 }
+.section-heading h3.non-script {
+	font-family: "Source Sans Pro", cursive;
+	font-size: 20px;
+}
 @media screen and (max-width: 768px) {
 	.section-heading h3 {
 		font-size: 24px !important;
@@ -300,7 +304,7 @@ h6 {
 #qbootstrap-gallery,
 #qbootstrap-testimonials,
 #qbootstrap-press {
-	padding: 7em 0;
+	padding: 3.5em 0;
 }
 @media screen and (max-width: 480px) {
 	#qbootstrap-couple,
@@ -313,7 +317,7 @@ h6 {
 	#qbootstrap-gallery,
 	#qbootstrap-testimonials,
 	#qbootstrap-press {
-		padding: 5em 0;
+		padding: 3em 0;
 	}
 }
 
@@ -744,7 +748,7 @@ h6 {
 }
 @media screen and (max-width: 768px) {
 	#qbootstrap-countdown .section-heading h2 {
-		font-size: 30px;
+		font-size: 50px;
 	}
 }
 #qbootstrap-countdown .section-heading .datewed {
@@ -1002,6 +1006,7 @@ h6 {
 .timeline-body > p,
 .timeline-body > ul {
 	margin-bottom: 0;
+	/* text-align: justify; */
 }
 
 .timeline-body > p + p {
@@ -1072,7 +1077,7 @@ h6 {
 }
 @media screen and (max-width: 768px) {
 	#qbootstrap-testimonials .section-heading h2 {
-		font-size: 30px;
+		font-size: 50px;
 	}
 }
 #qbootstrap-testimonials .section-heading.svg-sm .svg {
@@ -1196,22 +1201,40 @@ h6 {
 	margin-bottom: 20px !important;
 }
 
-.groom-men img {
-	margin-bottom: 20px;
+.groom-men .border {
+	padding: 28px;
+	margin: 0 24px;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-ms-border-radius: 50%;
 	border-radius: 50%;
+	margin-bottom: 20px;
+	background-color: #ff847c;
+}
+.groom-men .img-background {
+	background-color: rgba(255, 255, 255, .6);
+	padding: 24px;
+	border-radius: 16px;
 }
 @media screen and (max-width: 768px) {
-	.groom-men img {
-		width: 300px;
+	.groom-men .border {
 		margin: 0 auto;
 	}
 }
 .groom-men h3 {
-	font-family: "Clicker Script", cursive;
-	font-size: 28px;
+	font-family: "Source Sans Pro", cursive;
+	font-size: 18px;
+	margin-bottom: 40px;
+	color: #666;
+}
+.groom-men h3.account-number, .groom-men h3.account-name {
+	font-size: 24px;
+	color: #fff;
+}
+.groom-men h3.account-number {
+	margin-top: 42px;
+	margin-bottom: 0;
+	letter-spacing: 1px;
 }
 
 .wedding-events {
@@ -1804,6 +1827,49 @@ html, body {
 	background-size: cover;
 	position: relative;
 	background-repeat: no-repeat;
+}
+
+.fab-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	user-select: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+.fab-container .fab {
+	position: relative;
+	height: 60px;
+	width: 60px;
+	background-color: #ff847c;
+	border-radius: 50%;
+	z-index: 2;
+}
+.fab-container .fab::before {
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 35px;
+	width: 35px;
+	background-color: inherit;
+	border-radius: 0 0 10px 0;
+	z-index: -1;
+}
+.fab-container .fab .fab-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+.fab-container .fab .fab-content .icons {
+	color: white;
+	font-size: 28px;
+	cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

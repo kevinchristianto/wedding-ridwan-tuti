@@ -5,7 +5,6 @@ $(function() {
 	let arr = name.split("_")
 	arr.forEach((val, i) => {
 		arr[i] = arr[i][0].toUpperCase() + arr[i].substr(1)
-		console.log(arr[i])
 	})
 	name = arr.join(" ")
 	$('#recipient').html(name)
@@ -71,11 +70,29 @@ $(function() {
 	};
 
     $("#open-invitation").click(() => {
+		document.getElementById("audio").play()
 		$("#invitation-content").removeClass("hidden")
         $(".animate-box-hidden").addClass("animate-box")
 		parallax()
         contentWayPoint()
 		$(window).scrollTo($("#invitation-content"), 2000, {easing: 'easeInOutQuint'})
     })
+
+	$("#copy-account").click(function() {
+		var copyText = $(this).data('number')
+		var textArea = document.createElement("textarea")
+		textArea.value = copyText
+		document.body.appendChild(textArea)
+		textArea.select()
+		document.execCommand("Copy")
+		textArea.remove()
+	})
+
+	$("#toggle-audio").click(function() {
+		const audio = document.getElementById("audio"), state = $(this).data("state")
+		state == "playing" ? audio.pause() : audio.play()
+		state == "playing" ? $(this).data("state", "paused") : $(this).data("state", "playing")
+		$(this).toggleClass("icon-pause2").toggleClass("icon-play2")
+	})
 
 })
