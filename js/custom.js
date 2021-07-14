@@ -9,13 +9,6 @@ $(function() {
 	name = arr.join(" ")
 	$('#recipient').html(name)
 
-	$('.grid').masonry({
-		// options
-		itemSelector: '.grid-item',
-		columnWidth: '.grid-sizer',
-		percentPosition: true,
-	})
-
     // These 2 functions are copied from main.js
     // I copied it here just to simplify and make it easier to call, but it's not practical
     var contentWayPoint = () => {
@@ -83,6 +76,18 @@ $(function() {
 		parallax()
         contentWayPoint()
 		$(window).scrollTo($("#invitation-content"), 2000, {easing: 'easeInOutQuint'})
+
+		$('.grid').masonry({
+			// options
+			itemSelector: '.grid-item',
+			columnWidth: '.grid-sizer',
+			percentPosition: true,
+		})
+		$('.gallery-container').masonry({
+			itemSelector: '.gallery',
+			columnWidth: '.gallery-sizer',
+			percentPosition: true
+		})
     })
 
 	$(".copy-account").click(function() {
