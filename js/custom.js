@@ -9,6 +9,13 @@ $(function() {
 	name = arr.join(" ")
 	$('#recipient').html(name)
 
+	$('.grid').masonry({
+		// options
+		itemSelector: '.grid-item',
+		columnWidth: '.grid-sizer',
+		percentPosition: true,
+	})
+
     // These 2 functions are copied from main.js
     // I copied it here just to simplify and make it easier to call, but it's not practical
     var contentWayPoint = () => {
@@ -78,7 +85,7 @@ $(function() {
 		$(window).scrollTo($("#invitation-content"), 2000, {easing: 'easeInOutQuint'})
     })
 
-	$("#copy-account").click(function() {
+	$(".copy-account").click(function() {
 		var copyText = $(this).data('number')
 		var textArea = document.createElement("textarea")
 		textArea.value = copyText
