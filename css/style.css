@@ -1873,4 +1873,13 @@ html, body {
 	cursor: pointer;
 }
 
+#qbootstrap-testimonials .item {
+	position: relative;
+	top: -20px;
+}
+#qbootstrap-testimonials .item .box-testimony {
+	position: relative;
+	top: 50px;
+}
+
 /*# sourceMappingURL=style.css.map */

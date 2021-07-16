@@ -78,7 +78,6 @@ $(function() {
 		$(window).scrollTo($("#invitation-content"), 2000, {easing: 'easeInOutQuint'})
 
 		$('.grid').masonry({
-			// options
 			itemSelector: '.grid-item',
 			columnWidth: '.grid-sizer',
 			percentPosition: true,
