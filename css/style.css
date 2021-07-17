@@ -1874,12 +1874,20 @@ html, body {
 }
 
 #qbootstrap-testimonials .item {
-	position: relative;
-	top: -20px;
+	/* position: relative;
+	top: -20px; */
+	margin-top: -20px;
 }
 #qbootstrap-testimonials .item .box-testimony {
-	position: relative;
-	top: 50px;
+	/* position: relative;
+	top: 50px; */
+	margin-top: 50px;
+}
+#qbootstrap-testimonials .carousel-control {
+	background: transparent;
+}
+#qbootstrap-testimonials .carousel-control .glyphicon {
+	color: #ff847c;
 }
 
 /*# sourceMappingURL=style.css.map */
